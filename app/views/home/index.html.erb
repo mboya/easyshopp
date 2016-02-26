@@ -1,4 +1,4 @@
-<div class="ui inverted masthead centered segment">
+<!-- <div class="ui inverted masthead centered segment">
     <div class="ui page grid">
       <div class="column">
 
@@ -19,24 +19,28 @@
 		  <div class="right menu">
 		    <div class="item">
 		      <div class="ui icon input">
-		        <!--<input placeholder="Search..." type="text">-->
+		      
 		        <i class="marker icon"></i>
 		      </div>
 		    </div>
 		    <a class="ui item">
 		    	<i class="add to cart large icon"></i>
 		    </a>
-
-		    <%= link_to 'Log In', new_user_session_path, :class =>'ui item' %>
+<%#if user_signed_in? %>
+<%#= link_to 'Log Out', session_destroy_path, method: 'destroy', :class =>'ui item' %>
+<% #else %>
+<%#= link_to 'Log In', new_user_session_path, :class =>'ui item' %>
+<% #end %>
+		    
 		    
 		  </div>
 		</div>
 </div>
 </div>
-</div>
+</div> -->
 <div class="ui segment">
 	
-Hello Welcome to easy shopper
+Hello Welcome to easy shopper, <%= current_user %>
 </div>
 		     
 <div class="ui inverted vertical footer segment">
