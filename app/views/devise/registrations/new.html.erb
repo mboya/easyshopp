@@ -1,18 +1,4 @@
 
-<div class="ui inverted masthead centered segment">
-    <div class="ui page grid">
-      <div class="column">
-
-
-    <div class="ui secondary pointing menu">
-       <a class="logo item">
-      Easyshopp
-      </a>
-
-      </div>
-      </div>
-      </div>
-      </div>
 
 <div class="ui inverted segment" style="margin-left:400px ; margin-right: 400px;border-radius: 10px; margin-top: 100px;">
   <div class="ui inverted form">
@@ -48,13 +34,13 @@
   </div>
   <div class="inline field">
       <div class="ui checkbox">
-        <input class="hidden" tabindex="0" type="checkbox">
+        <input  tabindex="0" type="checkbox">
         <label>I agree to the terms and conditions</label>
       </div>
     </div>
  <div class="inline field">
-  <div class="ui blue submit button">
-    <% f.submit %>Sign up
+  <div >
+    <%= f.submit "Sign up" ,:class=>"ui blue submit button" %>
   </div>
 <% end %>
 <div class="ui green submit button">
