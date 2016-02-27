@@ -1,43 +1,5 @@
-<!-- <div class="ui inverted masthead centered segment">
-    <div class="ui page grid">
-      <div class="column">
+<%= render :partial => "shared/header" %>
 
-
-		<div class="ui secondary pointing menu">
-		   <a class="logo item">
-		  Easyshopp
-		  </a>
-		  <a class="active item">
-		    <i class="home icon"></i> Home
-		  </a>
-		  <a id="about" class="item">
-		    <i class="mail icon"></i> About
-		  </a>
-		  <a href ="#contact"class="item">
-		    <i class="heart icon"></i> Contact
-		  </a>
-		  <div class="right menu">
-		    <div class="item">
-		      <div class="ui icon input">
-		      
-		        <i class="marker icon"></i>
-		      </div>
-		    </div>
-		    <a class="ui item">
-		    	<i class="add to cart large icon"></i>
-		    </a>
-<%#if user_signed_in? %>
-<%#= link_to 'Log Out', session_destroy_path, method: 'destroy', :class =>'ui item' %>
-<% #else %>
-<%#= link_to 'Log In', new_user_session_path, :class =>'ui item' %>
-<% #end %>
-		    
-		    
-		  </div>
-		</div>
-</div>
-</div>
-</div> -->
 <div class="ui segment">
 	
 Hello Welcome to easy shopper, <%= current_user %>

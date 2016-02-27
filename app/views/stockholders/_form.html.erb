@@ -1,3 +1,5 @@
+
+
 <%= form_for(@stockholder) do |f| %>
   <% if @stockholder.errors.any? %>
     <div id="error_explanation">
@@ -6,12 +8,17 @@
       <ul>
       <% @stockholder.errors.full_messages.each do |message| %>
         <li><%= message %></li>
+       
+        
       <% end %>
       </ul>
     </div>
   <% end %>
+<div class="field">
+    <%= f.label :stockholder_name %><br />
+    <%= f.text_field :stockholder_name, autofocus: true ,:placeholder=>"Stockholder" %>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class=>"ui blue button"%>
   </div>
 <% end %>

@@ -1,6 +1,8 @@
-<p id="notice"><%= notice %></p>
+<%= render :partial => "shared/header" %>
 
-<h1>Listing Stockholders</h1>
+<p id="notice"><%= notice %></p>
+  <%if user_signed_in? %> 
+<center><h1 class="ui black header">Listing Stockholders</h1>
 
 <table>
   <thead>
@@ -11,10 +13,14 @@
 
   <tbody>
     <% @stockholders.each do |stockholder| %>
+   
       <tr>
-        <td><%= link_to 'Show', stockholder %></td>
-        <td><%= link_to 'Edit', edit_stockholder_path(stockholder) %></td>
-        <td><%= link_to 'Destroy', stockholder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= stockholder.stockholder_name %></td>
+      </tr>
+      <tr>
+        <td><%= link_to 'Show', stockholder ,:class => "ui green button"%></td>
+        <td><%= link_to 'Edit', edit_stockholder_path(stockholder), :class=>"ui blue button"%></td>
+        <td><%= link_to 'Destroy', stockholder, :class=>"ui red button",method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +28,8 @@
 
 <br>
 
-<%= link_to 'New Stockholder', new_stockholder_path %>
+<%= link_to 'New Stockholder', new_stockholder_path ,:class=>"ui black button"%></center>
+<%else%>
+<center>"Please sign in to view this page :)<br><br>
+<%= link_to 'Log In', new_user_session_path, :class =>'ui red button' %></center>
+<% end %>

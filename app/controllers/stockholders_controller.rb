@@ -70,5 +70,6 @@ class StockholdersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def stockholder_params
       params.fetch(:stockholder, {})
+      params.require(:stockholder).permit(:stockholder_name,:number_product)
     end
 end

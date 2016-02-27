@@ -1,0 +1,19 @@
+.ui.inverted.masthead.centered.segment
+	.ui.page.grid
+		.column
+			.ui.secondary.pointing.menu
+				= link_to "Easyshopp", root_path ,:class=>"logo item" 
+				= link_to "Home" ,root_path , :class=> "active item"
+				= link_to "Stockholders" ,stockholders_path , :class=>"item"
+				= link_to "About","" , :class=>"item"
+				= link_to "Contact", '' ,:class=>"item"
+				-if user_signed_in?
+					= link_to "Settings", edit_user_registration_path ,:class=>"item"
+					= link_to "Profile", "" ,:class=>"item"
+			    
+				.right.menu
+					.item
+						-if user_signed_in?
+							=link_to 'Log Out', destroy_user_session_path, method: 'delete', class: 'ui item'
+						-else
+							=link_to 'Log In', new_user_session_path, class: 'ui item'
